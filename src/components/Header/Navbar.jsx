@@ -1,11 +1,10 @@
-import { BsFacebook } from "react-icons/bs";
+
 import logo1 from "../../assets/Frame1.png";
 import logo2 from "../../assets/Frame2.png";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
-import { Link, useLoaderData, useLocation } from "react-router-dom";
-import SocialLogin from "../../pages/SocialLogin/SocialLogin";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -31,7 +30,7 @@ const Navbar = () => {
           </Link>
         )}
       </div>
-      <Link to="/startBooking">start Booking</Link>
+      <Link to="/startBooking">s Bking</Link>
 
       <ul className="hidden md:flex">
         <li>Home</li>
@@ -40,7 +39,7 @@ const Navbar = () => {
         <li>Blog</li>
         <li>Contact</li>
       </ul>
-
+      
       <div className="hidden md:flex">
         <Link to="/login">
           <button className="px-10">Login</button>
@@ -74,7 +73,6 @@ const Navbar = () => {
           <li className="border-b">Contact</li>
           <div className="flex flex-col">
             <Link to="/signup">
-              {" "}
               <button className="w-full my-6">SignUp</button>
             </Link>
             <Link to="/login">
