@@ -10,11 +10,6 @@ const Banner = () => {
       <div>
         <div className="absolute top-0 w-full h-full text-white flex items-center justify-center">
           {/* First Class Travell */}
-
-
-        
-
-
         </div>
       </div>
     </div>
