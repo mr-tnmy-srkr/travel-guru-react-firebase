@@ -1,61 +1,59 @@
-import { Link } from "react-router-dom";
+import { BsPerson, BsFacebook } from "react-icons/bs";
+import { BiSearch,  } from "react-icons/bi";
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
+import { useState } from "react";
 
 const Navbar = () => {
-  const navLinks = (
-    <>
-      <li>
-        <Link to="/news">News</Link>
-      </li>
-      <li>
-        <Link to="/destination">Destination</Link>
-      </li>
-      <li>
-        <Link to="/blogs">Blogs</Link>
-      </li>
-      <li>
-        <Link to="/contact">Contact</Link>
-      </li>
-    </>
-  );
+const [nav,setNav]=useState(false)
+const handleNav = ()=>{
+  setNav(!nav)
+}
+
 
   return (
-    <div>
-      <div className="navbar bg-transparent text-white ">
-        <div className="navbar-start">
-          <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >{navLinks}</ul>
+    <div className="flex justify-between items-center h-20 px-4">
+      <div>
+        <h1>TANMOY</h1>
+      </div>
+
+      <ul className="hidden md:flex">
+        <li>News</li>
+        <li>Destination</li>
+        <li>Blog</li>
+        <li>Contact</li>
+      </ul>
+
+      <div className="hidden md:flex">
+        <BiSearch size={20} />
+        <BsPerson size={20} />
+      </div>
+
+     {/* Hamburger */}
+     <div onClick={handleNav} className='md:hidden z-10'>
+        {nav ? <AiOutlineClose className='text-black' size={20} /> : <HiOutlineMenuAlt4 size={20} />}
+      </div>
+
+      {/* Mobile menu dropdown */}
+      <div onClick={handleNav} className={nav ? 'absolute text-black left-0 top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col' : 'absolute left-[-100%]'}>
+        <ul>
+          <h1>BEACHES.</h1>
+          <li className='border-b'>Home</li>
+          <li className='border-b'>Destinations</li>
+          <li className='border-b'>Travel</li>
+          <li className='border-b'>View</li>
+          <li className='border-b'>Book</li>
+          <div className='flex flex-col'>
+            <button className='my-6'>Search</button>
+            <button>Account</button>
           </div>
-          <Link to='/' className="btn btn-ghost normal-case text-xl">
-            <img className=" w-[100px]" src="/src/assets/Frame.svg" alt="" />
-          </Link>
-        </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-xl font-semibold">
-            {navLinks}
-          </ul>
-        </div>
-        <div className="navbar-end">
-          <a className="btn btn-warning px-10 capitalize text-xl">Login</a>
-        </div>
+          <div className="flex justify-between items-center my-6">
+            <BsFacebook className="icon"/>
+            <BsFacebook className="icon"/>
+            <BsFacebook className="icon"/>
+            <BsFacebook className="icon"/>
+          </div>
+        </ul>
       </div>
     </div>
   );
