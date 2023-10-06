@@ -10,9 +10,10 @@ const FindHotel = () => {
     <div className="mb-12">
       <Navbar></Navbar>
       <hr className="style" />
+      <h1 className="text-center mt-8">Stay in Hotels</h1>
       <div className="flex gap-8 px-4">
         <div className="flex-1  ">
-          <h1 className="mt-6">Stay in hotel</h1>
+          {/* <h1 className="mt-6">Stay in hotel</h1> */}
 
           <div className="my-8">
             <div className="card card-side bg-base-100 shadow-xl">
@@ -80,12 +81,12 @@ const FindHotel = () => {
           </div>
         
         </div>
-        <div className="flex-1 rounded-xl">
+        <div className="flex-1 rounded-xl pt-10 w-full">
    
 
 
-    <Map height={1000} defaultCenter={[50.879, 4.6997]} defaultZoom={11} >
-      <Marker width={50} anchor={[50.879, 4.6997]} />
+    <Map height={888} defaultCenter={[21.45, 92.00]} defaultZoom={11} >
+      <Marker width={50} anchor={[21.45, 92.00]} />
     </Map>
   
  
