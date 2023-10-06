@@ -1,6 +1,4 @@
-import { BsAirplane } from "react-icons/bs";
 import bgImage from "../../assets/Rectangle1.png";
-import { AiOutlineSearch } from "react-icons/ai";
 
 const Banner = () => {
   return (
