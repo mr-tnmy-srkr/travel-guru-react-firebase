@@ -1,7 +1,7 @@
 import Navbar from "../../components/Header/Navbar";
 import Banner from "../../components/Banner/Banner";
 import "./Home.css";
-
+import { FaArrowRight } from "react-icons/fa";
 import "swiper/css";
 import "swiper/swiper-bundle.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -53,72 +53,96 @@ const Home = () => {
             className="parallax-bg"
             style={{
               "background-image":
-                "url(https://i.ibb.co/DDdGBDm/Rectangle1.png)",
+                "url(https://i.ibb.co/JQPfQhV/pexels-adam-grabek-784849.jpg)",
             }}
             data-swiper-parallax="-23%"
           ></div>
-          <div className="absolute w-full h-full top-0 left-0 bg-[#000000B3]"></div>
+          <div className="absolute w-full h-full top-0 left-0 bg-[#605e5eb1]"></div>
           <SwiperSlide>
-            <div className="flex items-center"> 
-            <div className="w-2/5">
-               
-            <div className="title uppercase" data-swiper-parallax="-300">
-                Cox's bazar
-              </div>
-              <div className="text mt-5" data-swiper-parallax="-100">
-                <p>
-                  Cox's Bazar is a city, fishing port, tourism centre and
-                  district headquarters in southeastern Bangladesh. It is famous
-                  mostly for its long natural sandy beach, and it ...
-                </p>
-                <div className="mt-5" data-swiper-parallax="-100">
-                <button className="btn btn-primary">Booking</button>
+            <div className="flex items-center">
+              <div className="w-2/5">
+                <div className="title uppercase" data-swiper-parallax="-300">
+                  Cox's bazar
+                </div>
+                <div className="text mt-5" data-swiper-parallax="-100">
+                  <p>
+                    Cox's Bazar is a city, fishing port, tourism centre and
+                    district headquarters in southeastern Bangladesh. It is
+                    famous mostly for its long natural sandy beach, and it ...
+                  </p>
+                  <div className="mt-5" data-swiper-parallax="-100">
+                    <button className="btn btn-primary btn-lg capitalize">Booking <span><FaArrowRight/></span></button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="flex justify-between gap-3 w-3/5">
-              <img className="w-[30%] border-4 border-yellow-500 rounded-3xl" src={img1} alt="" />
-              <img className="w-[30%]" src={img2} alt="" />
-              <img className="w-[30%]" src={img3} alt="" />
-            </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="title" data-swiper-parallax="-300">
-              Slide 2
-            </div>
-            <div className="subtitle" data-swiper-parallax="-200">
-              Subtitle
-            </div>
-            <div className="text" data-swiper-parallax="-100">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                laoreet justo vitae porttitor porttitor. Suspendisse in sem
-                justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh
-                euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-                tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-              </p>
+              <div className="flex justify-between gap-3 w-3/5 relative">
+                <img
+                  className="w-[30%] border-4 border-yellow-500 rounded-3xl"
+                  src={img1}
+                  alt=""
+                />
+                <h3 className="absolute left-[6%] bottom-4 uppercase">   Cox's bazar</h3>
+                <img className="w-[30%]" src={img2} alt="" />
+                <img className="w-[30%]" src={img3} alt="" />
+              </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="title" data-swiper-parallax="-300">
-              Slide 3
+            <div className="flex items-center">
+              <div className="w-2/5">
+                <div className="title uppercase" data-swiper-parallax="-300">
+                  Sreemangal
+                </div>
+                <div className="text mt-5" data-swiper-parallax="-100">
+                  <p>
+                    Sreemangal is a city, fishing port, tourism centre and
+                    district headquarters in southeastern Bangladesh. It is
+                    famous mostly for its long natural sandy beach, and it ...
+                  </p>
+                  <div className="mt-5" data-swiper-parallax="-100">
+                    <button className="btn btn-lg  btn-primary capitalize">Booking <span><FaArrowRight/></span></button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between w-3/5 relative">
+                <img className="w-[30%]" src={img1} alt="" />
+                <img
+                  className="w-[30%] border-4 border-yellow-500 rounded-3xl"
+                  src={img2}
+                  alt=""
+                />
+<h3 className="absolute left-[40%] bottom-4 uppercase">   Sreemangal</h3>
+                <img className="w-[30%]" src={img3} alt="" />
+              </div>
             </div>
-            <div className="subtitle" data-swiper-parallax="-200">
-              Subtitle
-            </div>
-            <div className="text" data-swiper-parallax="-100">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                laoreet justo vitae porttitor porttitor. Suspendisse in sem
-                justo. Integer laoreet magna nec elit suscipit, ac laoreet nibh
-                euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-                tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-              </p>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex items-center">
+              <div className="w-2/5">
+                <div className="title uppercase" data-swiper-parallax="-300">
+                  Sundarbans
+                </div>
+                <div className="text mt-5" data-swiper-parallax="-100">
+                  <p>
+                    Sundarbans is a city, fishing port, tourism centre and
+                    district headquarters in southeastern Bangladesh. It is
+                    famous mostly for its long natural sandy beach, and it ...
+                  </p>
+                  <div className="mt-5" data-swiper-parallax="-100">
+                    <button className="btn btn-lg  btn-primary capitalize">Booking <span><FaArrowRight/></span></button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex justify-between w-3/5 relative border">
+                <img className="w-[30%]" src={img1} alt="" />
+                <img className="w-[30%]" src={img2} alt="" />
+                <img
+                  className="w-[30%] border-4 border-yellow-500 rounded-3xl"
+                  src={img3}
+                  alt=""
+                />
+                <h3 className="absolute right-[7%] bottom-4 uppercase">   Sundarban</h3>
+              </div>
             </div>
           </SwiperSlide>
         </Swiper>
