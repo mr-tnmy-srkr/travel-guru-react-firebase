@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div className="flex justify-between items-center h-20 px-4">
       <div>
-        {location.pathname === "/login" || location.pathname === "/signup" ? (
+        {location.pathname === "/login" || location.pathname === "/signup" || location.pathname === "/findHotel"? (
           <Link to="/" className={logo ? "hidden" : "block"}>
             <img src={logo1} alt="" />
           </Link>

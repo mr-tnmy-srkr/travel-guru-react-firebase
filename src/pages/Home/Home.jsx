@@ -13,18 +13,22 @@ import "swiper/css/navigation";
 import img1 from "../../assets/Sajek.png";
 import img2 from "../../assets/Sreemongol.png";
 import img3 from "../../assets/sundorbon.png";
-import banner from "../../assets/Frame1.png";
 
 // import required modules
 import { Parallax, Pagination, Navigation } from "swiper/modules";
+import { useNavigate } from "react-router-dom";
 
-/* const images = [
-  "https://via.placeholder.com/800x400?text=Slide+1",
-  "https://via.placeholder.com/800x400?text=Slide+2",
-  "https://via.placeholder.com/800x400?text=Slide+3",
-]; */
 
 const Home = () => {
+
+const navigate=useNavigate();
+
+const handleBooking=(name) => {
+  console.log(name);
+navigate("/startBooking")
+}
+
+
   return (
     <div>
       <div className="">
@@ -52,7 +56,7 @@ const Home = () => {
             slot="container-start"
             className="parallax-bg"
             style={{
-              "background-image":
+              "backgroundImage":
                 "url(https://i.ibb.co/JQPfQhV/pexels-adam-grabek-784849.jpg)",
             }}
             data-swiper-parallax="-23%"
@@ -71,7 +75,12 @@ const Home = () => {
                     famous mostly for its long natural sandy beach, and it ...
                   </p>
                   <div className="mt-5" data-swiper-parallax="-100">
-                    <button className="btn btn-primary btn-lg capitalize">Booking <span><FaArrowRight/></span></button>
+                    <button onClick={()=>handleBooking("cox")} className="btn btn-primary btn-lg capitalize">
+                      Booking
+                      <span>
+                        <FaArrowRight />
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -81,7 +90,10 @@ const Home = () => {
                   src={img1}
                   alt=""
                 />
-                <h3 className="absolute left-[6%] bottom-4 uppercase">   Cox's bazar</h3>
+                <h3 className="absolute left-[6%] bottom-4 uppercase">
+                  {" "}
+                  Cox's bazar
+                </h3>
                 <img className="w-[30%]" src={img2} alt="" />
                 <img className="w-[30%]" src={img3} alt="" />
               </div>
@@ -100,7 +112,12 @@ const Home = () => {
                     famous mostly for its long natural sandy beach, and it ...
                   </p>
                   <div className="mt-5" data-swiper-parallax="-100">
-                    <button className="btn btn-lg  btn-primary capitalize">Booking <span><FaArrowRight/></span></button>
+                    <button onClick={()=>handleBooking("sree")} className="btn btn-lg  btn-primary capitalize">
+                      Booking
+                      <span>
+                        <FaArrowRight />
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -111,7 +128,10 @@ const Home = () => {
                   src={img2}
                   alt=""
                 />
-<h3 className="absolute left-[40%] bottom-4 uppercase">   Sreemangal</h3>
+                <h3 className="absolute left-[41%] bottom-4 uppercase">
+                  {" "}
+                  Sreemangal
+                </h3>
                 <img className="w-[30%]" src={img3} alt="" />
               </div>
             </div>
@@ -129,11 +149,16 @@ const Home = () => {
                     famous mostly for its long natural sandy beach, and it ...
                   </p>
                   <div className="mt-5" data-swiper-parallax="-100">
-                    <button className="btn btn-lg  btn-primary capitalize">Booking <span><FaArrowRight/></span></button>
+                    <button onClick={()=>handleBooking("sundar")} className="btn btn-lg  btn-primary capitalize">
+                      Booking
+                      <span>
+                        <FaArrowRight />
+                      </span>
+                    </button>
                   </div>
                 </div>
               </div>
-              <div className="flex justify-between w-3/5 relative border">
+              <div className="flex justify-between w-3/5 relative ">
                 <img className="w-[30%]" src={img1} alt="" />
                 <img className="w-[30%]" src={img2} alt="" />
                 <img
@@ -141,7 +166,10 @@ const Home = () => {
                   src={img3}
                   alt=""
                 />
-                <h3 className="absolute right-[7%] bottom-4 uppercase">   Sundarban</h3>
+                <h3 className="absolute right-[7%] bottom-4 uppercase">
+                  {" "}
+                  Sundarban
+                </h3>
               </div>
             </div>
           </SwiperSlide>
